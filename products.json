@@ -1,0 +1,49 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Чехол A",
+        "price": 1000,
+        "rating": 5,
+        "reviews": 10,
+        "images": ["https://cdn0.ipoint.kz/AfrOrF3gWeDA6VOlDG4TzxMv39O7MXnF4CXpKUwGqRM/q:100/plain/s3://catalog-products/240909223412658859/240917140014303331.jpg@jpeg"],
+        "category": "Чехлы"
+      },
+      {
+        "id": 2,
+        "name": "Чехол B",
+        "price": 1500,
+        "rating": 10,
+        "reviews": 15,
+        "images": ["https://img.mvideo.ru/Pdb/50177136b.jpg"],
+        "category": "Чехлы"
+      },
+      {
+        "id": 3,
+        "name": "Аксессуар X",
+        "price": 500,
+        "rating": 10,
+        "reviews": 8,
+        "images": ["https://i-point.ru/storage/gallery/big/2465.jpg"],
+        "category": "Аксессуары"
+      },
+      {
+        "id": 4,
+        "name": "Новинка Y",
+        "price": 800,
+        "rating": 9.9,
+        "reviews": 12,
+        "images": ["https://my-apple-store.ru/wa-data/public/shop/products/13/44/14413/images/26918/26918.500@2x.jpeg"],
+        "category": "Новинки"
+      },
+      {
+        "id": 5,
+        "name": "Новинка Z",
+        "price": 2000,
+        "rating": 5,
+        "reviews": 20,
+        "images": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_bOkJzXIDVWIEhWtIjxu9plscJRWskxF0PWX1eq5OkH1qhbmPBeIh6vlf5j8Jz7tP-w&usqp=CAU"],
+        "category": "Новинки"
+      }
+    ]
+  }

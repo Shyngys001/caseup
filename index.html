@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Caseup – стильный интернет-магазин аксессуаров и чехлов. Современный дизайн, удобная навигация и быстрый заказ через WhatsApp." />
+  <title>Caseup - Главная</title>
+  
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Подключение шрифтов и Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Шапка сайта с бургер-меню и переключателем темы -->
+  <header class="header">
+    <nav class="nav-container">
+      <div class="logo">Caseup</div>
+      
+      
+      
+      <div class="nav-links" id="nav-links">
+        <a href="#hero" class="active-link">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="cart.html">Каталог</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+      
+      <!-- Кнопка переключения темы -->
+      <button class="btn theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="burger-menu" id="burger-menu" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Блок Главная (Hero) -->
+  <section class="hero fade-in" id="hero">
+    <div class="hero-content">
+      <h1>Добро пожаловать в Caseup</h1>
+      <p>Стильные аксессуары и чехлы, которые подчеркнут вашу индивидуальность</p>
+      <a href="cart.html" class="btn btn-primary">Перейти к товарам</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://caseitonline.com/cdn/shop/files/PhotoRoom_20240111_134322_1170x.jpg?v=1704962642" alt="Аксессуары и чехлы" />
+    </div>
+  </section>
+
+  <!-- Карусель Новинок -->
+  <section class="section fade-in" id="new-products-carousel">
+    <h2>Новинки</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn left" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+      <div class="carousel-wrapper" id="carousel-wrapper">
+        <!-- Слайды новинок заполнятся динамически -->
+      </div>
+      <button class="carousel-btn right" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section class="section fade-in" id="about">
+    <h2>О нас</h2>
+    <p>
+      Caseup – современный интернет-магазин, предлагающий лучшие аксессуары и чехлы. Мы уделяем внимание каждой детали, сочетая стиль, качество и актуальные тренды. Наши товары созданы для тех, кто ценит индивидуальность.
+    </p>
+    <div class="about-image-container slide-up">
+      <img src="img/aboutus.png" alt="О нас" />
+    </div>
+  </section>
+
+  <!-- Форма заявки -->
+  <section class="section fade-in" id="quick-request">
+    <h2>Быстрая заявка</h2>
+    <form id="quickRequestForm" class="order-form">
+      <div class="form-group">
+        <label for="requestName">Ваше имя</label>
+        <input type="text" id="requestName" name="requestName" placeholder="Введите имя" required />
+      </div>
+      <div class="form-group">
+        <label for="requestPhone">Номер телефона</label>
+        <input type="tel" id="requestPhone" name="requestPhone" placeholder="Введите номер" required />
+      </div>
+      <div class="form-group">
+        <label for="requestMessage">Ваш запрос</label>
+        <textarea id="requestMessage" name="requestMessage" placeholder="Опишите ваш запрос" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Отправить заявку</button>
+    </form>
+  </section>
+
+  <!-- Контакты -->
+  <section class="section fade-in" id="contacts">
+    <h2>Контакты</h2>
+    <p>
+      <strong>Телефон:</strong> +7 (700) 123-45-67<br />
+      <strong>Email:</strong> info@caseup.kz
+    </p>
+    <p>Работаем с понедельника по пятницу с 10:00 до 19:00 (GMT+6).</p>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Caseup. Все права защищены.</p>
+      <div class="social-links">
+        <a href="https://wa.me/+77007139646" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/caseup.asia/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="+7 700 713 9646" aria-label="Phone"><i class="fa fa-phone"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

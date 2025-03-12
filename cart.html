@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Caseup - Каталог товаров. Просмотрите наши товары, примените фильтр по категориям, добавьте их в корзину и оформите заказ через WhatsApp." />
+  <title>Caseup - Каталог товаров</title>
+  
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Подключение шрифтов и Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Шапка сайта с бургер-меню, переключателем темы и кнопкой корзины -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html">
+        <div class="logo">Caseup</div>
+      </a>
+      
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="index.html#about">О нас</a>
+        <a href="cart.html" class="active-link">Каталог</a>
+        <a href="index.html#contacts">Контакты</a>
+      </div>
+      
+      <!-- Кнопка переключения темы -->
+      <button class="btn theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+      </button>
+      
+      <!-- Кнопка корзины (открывает боковую панель) -->
+      <button class="btn btn-primary cart-btn" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </button>
+
+      <button class="burger-menu" id="burger-menu" aria-label="Открыть меню" aria-expanded="false">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+<!-- Секция фильтров -->
+<section class="section fade-in" id="filter-section">
+    <h2>Фильтры товаров</h2>
+    <div class="filters">
+      <div class="filter-item">
+        <label for="filter-category">Категория:</label>
+        <select id="filter-category">
+          <option value="">Все</option>
+          <!-- Категории будут добавлены динамически -->
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция товаров -->
+  <section class="products-grid fade-in" id="products-list">
+    <!-- Товары загружаются динамически из products.json -->
+  </section>
+
+  <!-- Боковая панель корзины -->
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Корзина</h2>
+      <button class="close-cart" onclick="toggleCart()">&times;</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <h3>Итого: <span id="cart-total">0 ₸</span></h3>
+    </div>
+    <button class="btn btn-primary checkout-btn" onclick="openCheckoutForm()">Оформить заказ</button>
+  </aside>
+
+  <!-- Модальное окно оформления заказа -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal">
+      <h2>Оформление заказа</h2>
+      <form id="checkout-form">
+        <div class="form-group">
+          <label for="customerName">Ваше имя</label>
+          <input type="text" id="customerName" required />
+        </div>
+        <div class="form-group">
+          <label for="customerPhone">Номер телефона</label>
+          <input type="tel" id="customerPhone" required />
+        </div>
+        <div class="form-group">
+          <label for="paymentMethod">Способ оплаты</label>
+          <select id="paymentMethod" required>
+            <option value="Наличные">Наличные</option>
+            <option value="Карта">Карта</option>
+            <option value="Kaspi Gold">Kaspi Gold</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить в WhatsApp</button>
+        <button type="button" class="btn btn-secondary" onclick="closeCheckoutForm()">Отмена</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <p>&copy; 2025 Caseup. Все права защищены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
