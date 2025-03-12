@@ -92,7 +92,7 @@ function formatPrice(price) {
   }).format(price);
 }
 
-/* Функция для отображения новинок в виде карусели */
+/* Функция для отображения новинок в виде слайдера */
 function displayNewProductsCarousel() {
   const carouselWrapper = document.getElementById('carousel-wrapper');
   if (!carouselWrapper) return;
@@ -120,14 +120,18 @@ function displayNewProductsCarousel() {
 let currentSlide = 0;
 function updateCarousel() {
   const carouselWrapper = document.getElementById('carousel-wrapper');
-  // Используем ширину 260px (с учётом отступа)
-  const slideWidth = 260; 
+  if (!carouselWrapper || carouselWrapper.children.length === 0) return;
+  // Вычисляем ширину первого слайда с учетом margin-right
+  const firstSlide = carouselWrapper.children[0];
+  const slideStyle = window.getComputedStyle(firstSlide);
+  const slideWidth = firstSlide.offsetWidth + parseInt(slideStyle.marginRight);
   carouselWrapper.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 }
 
 function nextSlide() {
-  const newItems = allProducts.filter(product => product.category === "Новинки");
-  if (currentSlide < newItems.length - 1) {
+  const carouselWrapper = document.getElementById('carousel-wrapper');
+  const totalSlides = carouselWrapper.children.length;
+  if (currentSlide < totalSlides - 1) {
     currentSlide++;
     updateCarousel();
   }
@@ -139,6 +143,9 @@ function prevSlide() {
     updateCarousel();
   }
 }
+
+// Обновление слайдера при изменении размеров окна
+window.addEventListener('resize', updateCarousel);
 
 /* Добавление товара в корзину без alert */
 function addToCart(id) {

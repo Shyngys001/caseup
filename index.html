@@ -15,12 +15,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Шапка сайта с бургер-меню и переключателем темы -->
+  <!-- Шапка сайта с бургер-меню, переключателем темы и кнопкой корзины -->
   <header class="header">
     <nav class="nav-container">
       <div class="logo">Caseup</div>
-      
-      
       
       <div class="nav-links" id="nav-links">
         <a href="#hero" class="active-link">Главная</a>
@@ -33,7 +31,7 @@
       <button class="btn theme-toggle" id="theme-toggle" aria-label="Переключить тему">
         <i class="fas fa-moon"></i>
       </button>
-
+      
       <button class="btn btn-primary cart-btn" onclick="toggleCart()">
         <i class="fas fa-shopping-cart"></i>
         <span id="cart-count">0</span>
@@ -59,13 +57,13 @@
     </div>
   </section>
 
-  <!-- Карусель Новинок -->
+  <!-- Секция слайдера Новинок -->
   <section class="section fade-in" id="new-products-carousel">
     <h2>Новинки</h2>
     <div class="carousel-container">
       <button class="carousel-btn left" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
       <div class="carousel-wrapper" id="carousel-wrapper">
-        <!-- Слайды новинок заполнятся динамически -->
+        <!-- Слайды новинок будут заполнены динамически через JS -->
       </div>
       <button class="carousel-btn right" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
     </div>
@@ -117,9 +115,9 @@
     <div class="footer-content">
       <p>&copy; 2025 Caseup. Все права защищены.</p>
       <div class="social-links">
-        <a href="https://wa.me/+77007139646" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/+77007139646" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/caseup.asia/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="tel:+77007139646" aria-label="Phone"><i class="fa fa-phone"></i></a>
+        <a href="tel:+77007139646" aria-label="Телефон"><i class="fa fa-phone"></i></a>
       </div>
     </div>
   </footer>
