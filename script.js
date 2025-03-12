@@ -256,7 +256,7 @@ ${itemsText}
 Итого: ${formatPrice(total)}`;
   
   const encoded = encodeURIComponent(message);
-  const whatsappURL = `https://wa.me/77001234567?text=${encoded}`;
+  const whatsappURL = `https://wa.me/77479894879?text=${encoded}`;
   window.open(whatsappURL, '_blank');
   closeCheckoutForm();
 });
